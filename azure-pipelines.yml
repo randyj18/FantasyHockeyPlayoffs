@@ -1,4 +1,8 @@
 # Python package
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'whoami'
 # Create and test a Python package on a specific Python version.
 
 trigger:

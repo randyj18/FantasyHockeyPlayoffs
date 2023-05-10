@@ -9,7 +9,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 strategy:
- parallel: 1
+  parallel: 1
   matrix:
     Python27:
       python.version: '2.7'

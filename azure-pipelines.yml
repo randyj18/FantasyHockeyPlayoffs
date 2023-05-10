@@ -1,16 +1,16 @@
 # Python package
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'whoami'
 # Create and test a Python package on a specific Python version.
-
+    
 trigger:
 - main
 
 pool: Default
 
 steps:
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'whoami'
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.8'

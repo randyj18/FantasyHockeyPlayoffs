@@ -4,7 +4,7 @@
 trigger:
 - main
 
-pool: DESKTOP-VRUKDRR
+pool: Default
 
 steps:
 - task: UsePythonVersion@0

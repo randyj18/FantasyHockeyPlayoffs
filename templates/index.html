@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Player Stats</title>
+    <style>
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+      }
+      th, td {
+          padding: 5px;
+          text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Standings</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Manager</th>
+          <th>Overall Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for manager, total in manager_totals.items() %}
+        <tr>
+          <td>{{ manager }}</td>
+          <td>{{ total }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br>  
+  <body>
+    <h1>Player Stats</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Manager</th>
+          <th>Player</th>
+          <th>Player ID</th>
+          <th>Goals</th>
+          <th>Assists</th>
+          <th>Points</th>
+          <th>Gordie Howe Hattricks</th>
+          <th>Conn Smythe</th>
+          <th>Pts Before Acquiring</th>
+          <th>Total Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for player in player_stats %}
+        <tr>
+          <td>{{ player['Manager'] }}</td>
+          <td>{{ player['Player'] }}</td>
+          <td>{{ player['Player ID'] }}</td>
+          <td>{{ player['Goals'] }}</td>
+          <td>{{ player['Assists'] }}</td>
+          <td>{{ player['Points'] }}</td>
+          <td>{{ player['Gordie Howe Hattricks'] }}</td>
+          <td>{{ player['Conn Smythe'] }}</td>
+          <td>{{ player['Pts Before Acquiring'] }}</td>
+          <td>{{ player['Total Points'] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <h1>Goalie Stats</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Manager</th>
+          <th>Player</th>
+          <th>Player ID</th>
+          <th>Wins</th>
+          <th>Shutouts</th>
+          <th>Assists</th>
+          <th>Pts Before Acquiring</th>
+          <th>Total Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for goalie in goalie_stats %}
+        <tr>
+          <td>{{ goalie['Manager'] }}</td>
+          <td>{{ goalie['Player'] }}</td>
+          <td>{{ goalie['Player ID'] }}</td>
+          <td>{{ goalie['Wins'] }}</td>
+          <td>{{ goalie['Shutouts'] }}</td>
+          <td>{{ goalie['Assists'] }}</td>
+          <td>{{ goalie['Pts Before Acquiring'] }}</td>
+          <td>{{ goalie['Total Points'] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

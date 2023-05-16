@@ -139,7 +139,7 @@ def index():
             'Wins': row[3],
             'Shutouts': row[4],
             'Assists': row[5],
-            'Points Before Acquiring': row[6],
+            'Pts Before Acquiring': row[6],
             'Total Points': row[7]
         })
     conn.close()

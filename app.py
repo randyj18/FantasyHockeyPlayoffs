@@ -144,7 +144,9 @@ def index():
         })
     conn.close()
 
-    return render_template('index.html', player_stats=player_stats, goalie_stats=goalie_stats, manager_totals=manager_totals)
+    sorted_manager_totals = dict(sorted(manager_totals.items(), key=lambda x: x[1], reverse=True))
+
+    return render_template('index.html', player_stats=player_stats, goalie_stats=goalie_stats, manager_totals=sorted_manager_totals)
 
 if __name__ == '__main__':
     app.run(debug=True)
